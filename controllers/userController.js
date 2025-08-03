@@ -9,6 +9,7 @@ const generateToken = (id) => {
 
 
 const registerUser = async (req, res) => {
+  console.log('👤 registerUser controller received:', req.body);
   const { name, email, password } = req.body;
 
   const userExists = await User.findOne({ email });
